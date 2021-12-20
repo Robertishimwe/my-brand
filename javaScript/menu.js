@@ -14,13 +14,14 @@ template.innerHTML = `
     top: 0;
     position: fixed;
     width: 100%;
-    height: 121px;
+    height: 90px;
     background-color:white;
     z-index: 9;
 }
 
 #logo{
     cursor: pointer;
+    width:70%
 }
 .home_burger {
     display: none;
@@ -107,7 +108,7 @@ ul li a{
         <div class="menu">
             <ul class="menu-liste">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">About me</a></li>
+                <li><a href="../html/aboutMe.html">About me</a></li>
                 <li><a href="../index.html#skills-section">Skills</a></li>
                 <li><a href="../index.html#projects">Project</a></li>
                 <li><a href="#">Blog</a></li>

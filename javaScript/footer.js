@@ -13,6 +13,7 @@ template.innerHTML = `
     justify-content: space-evenly;
     background-color:#3A5768;
     margin: auto;
+    margin-top:200px;
 }
 .footer-content{
     margin-top: 30px;

@@ -8,13 +8,14 @@
     top: 0;
     position: fixed;
     width: 100%;
-    height: 121px;
+    height: 90px;
     background-color:white;
     z-index: 9;
 }
 
 #logo{
     cursor: pointer;
+    width: 70%;
 }
 .home_burger {
     display: none;
@@ -28,7 +29,7 @@
     list-style: none;
     color: #1D53AE;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 20px;
     right: 100px;
     font-family: 'Roboto', sans-serif;
    /* border: 1px solid black; */
@@ -103,7 +104,7 @@ html{
 .intro{
   text-align: center;
   color: white;
-  font-size: 46px;
+  font-size: 44px;
     
 }
 
@@ -136,8 +137,8 @@ html{
     
 }
 .card{
-    width: 26%;
-    height: 440px;
+    width: 24%;
+    height: 400px;
     margin-top: 40px;
     background-color: white;
     box-shadow: 4px 4px 4px 4px#888888;
@@ -151,8 +152,8 @@ html{
 
 .profile-picture{
     width: 119%;
-    height: 500px;
-    margin-top: -50px;
+    height: 115%;
+    margin-top: -46px;
     margin-left: -1.5em;
 }
 .title-card{
@@ -213,8 +214,8 @@ html{
 }
 .contact-form{
     margin: auto;
-    width: 40%;
-    height: 470px;
+    width: 30%;
+    height: 420px;
     border: 1px solid #1D53AE;
     display: flex;
     flex-direction: column;
@@ -225,13 +226,13 @@ html{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height: 42px;
+    height: 38px;
     background-color: #C4C4C4;
     border: none;
     outline: none;
 }
 .contact-message{
-    height: 117px;
+    height: 100px;
 
 }
 .contact-label{
