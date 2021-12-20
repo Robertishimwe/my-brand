@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+body{
+    background-color: #3A5768;
+    font-family: 'Roboto', sans-serif;
+}
+.login-container{
+    background-color: white;
+    width: 35%;
+    height: 450px;
+    margin: auto;
+    margin-top: 25vh;
+    border-radius: 13px;
+}
+.login-title{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.login-components{
+    position:relative;
+    width: 100%;
+    height: 40px;
+    background-color: #C4C4C4;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+
+}
+.login-form{
+    width: 70%;
+    margin: auto;
+    
+}
+.login-text{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 30px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.error-message{
+    text-align: center;
+    
+}
+.btn-text{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #3A5768;
+}
