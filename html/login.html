@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/logo3ff.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/login.css">
+
     
     <title>Login</title>
 </head>
 <body>
     
           <menu-bar></menu-bar>
+          
 
-          <div class="login-container">
+          <div class="login-container"> 
               <p class="login-title">Login</p>
               <p class="error-message" >rrrrrrrrrrrrr</p>
-              <form action="#" method="post" class="login-form"> 
+              <form method="post" class="login-form"> 
 
                   <label for="email" class="login-text">Email</label><br/>
 
@@ -26,10 +28,18 @@
 
                   <input type="password" name="user-password" id="user-password" class="login-components"><br/> <br/>
 
-                  <input type="submit" value="login" class="login-components btn-text">
+                  <input type="submit" value="login" class="login-components btn-text" onclick="login()">
               </form>
 
           </div>
-    <script src="../javaScript/menu.js"></script>
+
+          <footer-bar></footer-bar>
+           <script src="../javaScript/login.js"></script>
+          <script src="../javaScript/menu.js"></script>
+          <script  src="../javaScript/footer.js"></script>
+          
+         
 </body>
+
+  
 </html>

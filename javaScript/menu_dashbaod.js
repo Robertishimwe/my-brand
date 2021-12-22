@@ -112,7 +112,7 @@ ul li a{
                 <li><a href="../index.html#skills-section">Skills</a></li>
                 <li><a href="../index.html#projects">Project</a></li>
                 <li><a href="#">Blog</a></li>
-                <a href="../html/login.html" class="loginBtn"> <li class="login">Log in</li> </a>
+                <a href="../index.html" class="loginBtn"> <li class="login">Logout</li> </a>
             </ul>
         </div>
 
