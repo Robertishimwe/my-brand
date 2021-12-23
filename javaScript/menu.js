@@ -111,7 +111,7 @@ ul li a{
                 <li><a href="../html/aboutMe.html">About me</a></li>
                 <li><a href="../index.html#skills-section">Skills</a></li>
                 <li><a href="../index.html#projects">Project</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="../html/blog.html">Blog</a></li>
                 <a href="../html/login.html" class="loginBtn"> <li class="login">Log in</li> </a>
             </ul>
         </div>
