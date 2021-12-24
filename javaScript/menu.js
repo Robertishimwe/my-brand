@@ -95,7 +95,7 @@ ul li a{
 @media screen and (max-width: 500px){
 #logo {
     width: 230px;
-    margin-top: 14%;
+    margin-top: 3%;
 }
 
 
