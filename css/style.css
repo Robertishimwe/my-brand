@@ -341,8 +341,13 @@ progress{
 @media screen and (max-width: 500px){
 #logo {
     width: 230px;
-    margin-top: 14%;
+    margin-top: 3%;
 }
+.intro{
+
+    font-size: 39px;
+      
+  }
 .skills-section{
     margin-top: 1070px;
     display: flex;
