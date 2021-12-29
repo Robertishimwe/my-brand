@@ -62,11 +62,15 @@ ul li a{
     text-decoration: none;
     color:#1D53AE;
     cursor: pointer;
+    
 }
 .loginBtn:hover{
     background-color:#1D53AE;
     color: white;
     border-radius: 36px;
+    transition: 0.9S;
+    
+    
     
 }
 /*end of navigation bar*/
@@ -105,8 +109,17 @@ html{
   text-align: center;
   color: white;
   font-size: 44px;
+}
+#hireMe{
+    text-decoration: none;
+    color: #1D53AE;
     
 }
+#hireMe:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+
 
 .hireMe{
     margin: auto;
@@ -118,14 +131,20 @@ html{
     color:  #1D53AE; 
     border-radius:29px;
     padding: .4em .7em;
+    cursor: pointer;
     
 
 }
 .hireMe:hover{
     background-color:#1D53AE;
     color: white;
+    cursor: pointer;
+    transition: 0.6s;
 
 }
+
+    
+
 /*end of introduction section*/
 
 .skills-section{
@@ -209,6 +228,7 @@ html{
     height: 630px;
     background-color: #dde9f0;
     margin-top:  1619px;
+    
 }
 .contact-title{
     color: #1D53AE;
@@ -224,6 +244,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 10px;
     
 }
 .contact-box{
@@ -231,9 +252,10 @@ html{
     margin-right: auto;
     width: 80%;
     height: 38px;
-    background-color: #C4C4C4;
+    background-color: #FFF;
     border: none;
     outline: none;
+    border-radius: 5px;
 }
 .contact-message{
     height: 100px;
@@ -254,12 +276,14 @@ html{
     background-color: #dde9f0;
     font-size: 25px;
     cursor: pointer;
+    border-radius: 4px;
 
 }
 .send-message:hover{
     background-color: #1D53AE;
     color: #dde9f0;
     cursor:pointer;
+    transition: 1s;
 
 }
 progress{
@@ -303,7 +327,8 @@ progress{
     width: 40%;
     height: 29px;
     font-size: 20px;
-    background-color:#C4C4C4;
+    background-color:#1D53AE;
+    color: #fff;
     border: none;
     cursor: pointer;
     margin-top: 4px;
@@ -311,7 +336,7 @@ progress{
 
 }
 .subscribe:hover{
-    background-color: #1D53AE;
+    background-color: #035bf3f6;
     color: white;
 }
 .footer-liste{

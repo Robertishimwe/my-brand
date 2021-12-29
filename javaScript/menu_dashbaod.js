@@ -73,6 +73,7 @@ ul li a{
     background-color:#1D53AE;
     color: white;
     border-radius: 36px;
+    transition:.9s;
     
 }
 
