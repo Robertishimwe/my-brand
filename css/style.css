@@ -21,6 +21,10 @@
     display: none;
     width: 50px;
 }
+.home_close{
+    display: none;
+    width: 50px;
+}
 .menu-liste{
     align-items: center;
     width: 100%;
@@ -358,10 +362,34 @@ progress{
         margin-right: 2rem;
         margin-top: 4%;
     }
+    .home_close{
+        display: none;
+        width: 50px;
+        margin-right: 2rem;
+        margin-top: 4%;
+
+    }
+    #menu {
+        display: none;
+    }
   
     
     .menu {
-        display: none;
+        background-color: #FFF;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+        height: 100vh;
+        width: 100%;
+    }
+    .menu-liste{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right: auto;
+        line-height: 40px;
     }
     
 }

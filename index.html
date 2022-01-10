@@ -16,7 +16,7 @@
           
     <div class="nav">
         <div class="logo"><a href="#"><img src="./images/logo head.png" alt="logo" id="logo"></a></div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <ul class="menu-liste">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./html/aboutMe.html">About me</a></li>
@@ -27,7 +27,8 @@
             </ul>
         </div>
 
-           <img src="./images/icons8-menu.svg" alt="home-burge" class="home_burger">
+           <img src="./images/icons8-menu.svg" alt="home-burge" class="home_burger" onclick="homeicon()">
+           <img src="./images/icons8-close.svg" alt="close" class="home_close" onclick="homeClose()">
     </div>
 
    <!--end of navigation bar-->> 
@@ -174,6 +175,31 @@
 
 
     </div>
+
+    <script src="./javaScript/menu_control.js"></script>
+    <script>
+    var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+    
+    </script>
     
 </body>
 </html>
