@@ -40,7 +40,8 @@ footertemplate.innerHTML = `
     width: 40%;
     height: 29px;
     font-size: 20px;
-    background-color:#C4C4C4;
+    background-color:#1D53AE;
+    color:white;
     border: none;
     cursor: pointer;
     margin-top: 4px;
@@ -48,7 +49,7 @@ footertemplate.innerHTML = `
 
 }
 .subscribe:hover{
-    background-color: #1D53AE;
+    background-color: #035bf3f6;
     color: white;
 }
 .footer-liste{

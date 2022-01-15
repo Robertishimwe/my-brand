@@ -1,6 +1,40 @@
+
+
+
 const menuTemplate = document.createElement("template");
 menuTemplate.innerHTML = `
+<html>
+<head>
+<script src="./javaScript/menu_control.js"></script>
+<script src="./javaScript/geoTracker.js"></script>
+<script>
 
+
+let homeicon = () => {
+    let homeBurger = document.querySelector(".home_burger");
+    let homeClose = document.querySelector(".home_close");
+    let menuList = document.querySelector(".menu");
+
+    homeBurger.style.display="none";
+    menuList.style.display="block";
+    homeClose.style.display="block";
+
+
+}
+
+let homeClose = () => {
+    let homeBurger = document.querySelector(".home_burger");
+    let homeClose = document.querySelector(".home_close");
+    let menuList = document.querySelector(".menu");
+
+    homeBurger.style.display="block";
+    homeClose.style.display="none";
+    menuList.style.display="none";
+
+
+}
+
+</script>
 <style>
 
 
@@ -24,6 +58,10 @@ menuTemplate.innerHTML = `
     width:70%
 }
 .home_burger {
+    display: none;
+    width: 50px;
+}
+.home_close{
     display: none;
     width: 50px;
 }
@@ -77,18 +115,61 @@ ul li a{
     
 }
 
+/*MEDIA QUERIES*/
+
 @media screen and (max-width: 1000px){
     .home_burger {
         display: block;
         width: 50px;
         margin-right: 2rem;
         margin-top: 4%;
+        transition: 1s;
+    }
+    .home_close{
+        display: none;
+        width: 50px;
+        margin-right: 2rem;
+        margin-top: 4%;
+        transition: cubic-bezier(0, 1.21, 0.25, 1);
+
+    }
+    #menu {
+        display: none;
+        transform: 2s;
     }
   
     
     .menu {
-        display: none;
+        background-color: #FFF;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+        height: 100vh;
+        width: 100%;
     }
+    .menu-liste{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right: auto;
+        line-height: 40px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+#logo {
+    width: 230px;
+    margin-top: 3%;
+}
+    
+
+
+
+
+
     
 }
 
@@ -102,11 +183,12 @@ ul li a{
 
 
 </style>
+</head>
 
 
 <div class="nav">
         <div class="logo"><a href="../index.html"><img src="../images/logo head.png" alt="logo" id="logo"></a></div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <ul class="menu-liste">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../html/aboutMe.html">About me</a></li>
@@ -117,10 +199,11 @@ ul li a{
             </ul>
         </div>
 
-           <img src="../images/icons8-menu.svg" alt="home-burge" class="home_burger">
+           <img src="../images/icons8-menu.svg" alt="home-burge" class="home_burger" id="home_burger" onclick="homeicon()">
+           <img src="../images/icons8-close.svg" alt="close" class="home_close" onclick="homeClose()">
     </div>
 
-
+<html>
 `;
 
 class menu extends HTMLElement {
@@ -133,3 +216,13 @@ class menu extends HTMLElement {
 
 
 window.customElements.define('menu-bar',menu);
+
+
+function homeicon(){
+    let x = document.getElementById("home_burger").value;
+    x.style.display="none";
+}
+
+
+
+

@@ -1,7 +1,39 @@
+function buildTable(){
+
+
+    let a = [
+    {email:"amanda@gmail.com"},
+    {email:"rene@gmail.com"},
+    {email:"gashoka@gmail.com"},
+    {email:"aimable@gmail.com"},
+    {email:"manzi@gmail.com"}
+   
+   ];
+
+   let mytable = document.getElementById("mytable");
+   for(let i of a) {
+    mytable.innerHTML += `
+    <tr class="fetched">
+     <td>${i.email}</td>    
+    </tr>
+    
+    `
+   }
+
+
+} buildTable()
+
+
+
+
 function subscription() {
 
     let a = document.getElementById("board");
 
+
+
+
+    
     let b = `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -16,9 +48,9 @@ function subscription() {
                  font-family: 'Roboto', sans-serif;
                  
                }
-            table{
+            .table1{
                 margin: auto;
-                width: 40%;
+                width: 0%;
             }
             th{
                 background-color: #1D53AE;
@@ -34,7 +66,7 @@ function subscription() {
     </head>
     <body>
     
-    <table>
+    <table class="table1">
         <tr>
           <th> EMAILs </th> 
         </tr>
@@ -44,35 +76,6 @@ function subscription() {
     
     </table>
     
-    <script>
-    
-        
-    
-        function buildTable(){
-    
-    
-            let a = [
-            {email:"amanda@gmail.com"},
-            {email:"rene@gmail.com"},
-            {email:"gashoka@gmail.com"},
-            {email:"aimable@gmail.com"},
-            {email:"manzi@gmail.com"}
-           
-           ];
-    
-           let mytable = document.getElementById("mytable");
-           for(let i of a) {
-            mytable.innerHTML += ``
-            <tr class="fetched">
-             <td>${i.email}</td>    
-            </tr>
-            
-            ``
-           }
-        
-    
-      } buildTable()
-    </script>
         
     </body>
     </html>`

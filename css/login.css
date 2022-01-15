@@ -44,6 +44,10 @@ body{
 .error_message{
     text-align: center;
     display: none;
+    background-color: red;
+    width: 70%;
+    margin: auto;
+    transition: 1s;
     
 }
 .btn-text{
@@ -51,6 +55,15 @@ body{
     font-family: 'Roboto', sans-serif;
     color: white;
     background-color: #3A5768;
+    cursor: pointer;
+    border: 1px solid #3A5768;
+    transition: 1s;
+}
+.btn-text:hover{
+    background-color: #1D53AE;
+    color: white;
+    transition: 1s;
+    border: 1px solid #1D53AE;
 }
 @media screen and (max-width: 700px){
     .login-container{
