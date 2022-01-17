@@ -14,12 +14,11 @@ body{
 }
 .blog-container{
     width: 40%;
-    height: auto;
-    min-height: 40px;
+    height: 900px;
     background-color: white;
     border-radius: 19px;
     margin: auto;
-    margin-top: -180px;
+    margin-top: -150px;
     margin-bottom: 150px;
     box-shadow: 1px 1px 8px 2px #888888;
 }
@@ -39,15 +38,13 @@ body{
 .post-container{
     border: 1px solid black;
     width: 95%;
-    height: 450px;
+    height: 350px;
     margin: auto;
     margin-top: 4px;
-    margin-bottom: 40px;
-    padding-bottom: 4px;
 }
 .feature-img-container{
     width: 97%;
-    height: 75%;
+    height: 70%;
    /* border: 1px solid black;*/
     margin: auto;
     margin-top: 7px;
@@ -65,18 +62,15 @@ body{
     display: flex;
    /* border: 1px solid black;*/
     width: 97%;
-    height: 6%;
+    height: 12%;
     margin-top: -9px;
     margin-left: 5px;
 }
 .reaction-btn, .counter{
     margin-left: 9px;
 }
-.reaction-btn:hover{
-    color: red;
-}
 .counter{
-    font-size: 12px;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 1000px){
@@ -96,7 +90,7 @@ body{
 @media screen and (max-width: 500px){
     .blog-container{
         width: 90%;
-        height: auto    ;
+        height: 900px;
     }
     .reaction-box{
         margin-top: -22px;
@@ -108,7 +102,7 @@ body{
 @media screen and (max-width: 360px){
     .blog-container{
         width: 100%;
-        height: auto;
+        height: 900px;
     }
     .reaction-box{
         margin-top: -22px;
