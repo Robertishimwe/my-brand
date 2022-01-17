@@ -1,13 +1,4 @@
-
-
-    
-
-
-
-
-
-
-//delete only code above
+//Delete only code above
 
 
 
@@ -37,7 +28,6 @@ function locations() {
               overflow-y: scroll;
               transition: 2s;
           }
-
           .usersLocation{
               width: 100%;
               background-color: #1D53AE;
@@ -49,7 +39,6 @@ function locations() {
             position: sticky;
             top:8px;
             transition:2s;
-
           }
           .usersLocation p{
               text-align: center;
@@ -73,9 +62,7 @@ function locations() {
               color:black;
           }
           .long:hover{
-
             background-color:#dde9f0;
-
           }
            .lat:hover{
               background-color:#dde9f0;
@@ -93,7 +80,6 @@ function locations() {
             <div class="usersLocation">
                 <p>Traffic Source</p>
             </div>
-
             <!--end of title-->
             
             <table class="table1">
@@ -104,8 +90,6 @@ function locations() {
             
                     
                 
-
-
                 <tbody id="mytable">
             
                 </tbody>
@@ -140,7 +124,7 @@ function locations() {
 
     function buildTable(){
         
-    
+        let h = 0;
 
             //looping through geolocation
                 for(let i=0;i<localStorage.length;i++){
@@ -154,10 +138,10 @@ function locations() {
                     console.log(arr1)
                 
                     
-            
+                
               if(type == `locator`) {
                  //console.log(long)
-              
+              h+1;
             
               
         
@@ -190,4 +174,3 @@ function locations() {
     
 
 }
-
