@@ -5,17 +5,24 @@ body{
     background-color: #3A5768;
     font-family: 'Roboto', sans-serif;
 }
+.nothaveAccount{
+    margin: auto;
+    padding-left: 7%;
+}
+a:hover{
+    color: #1D53AE;
+}
 .login-container{
     background-color: white;
     width: 30%;
-    height: 400px;
+    height: 495px;
     margin: auto;
-    margin-top: 25vh;
+    margin-top: 20vh;
     border-radius: 13px;
 }
 .login-title{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 30px;
     font-family: 'Roboto', sans-serif;
 }
@@ -65,21 +72,17 @@ body{
     transition: 1s;
     border: 1px solid #1D53AE;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
 .nothaveAccount{
     margin: auto;
     padding-left: 7%;
 }
-a:hover{
+.login:hover{
     color: #1D53AE;
 }
 @media screen and (max-width: 700px){
     .login-container{
          width: 50%;
-         height: 400px;
+         height: 470px;
 
     }
 }
@@ -87,21 +90,21 @@ a:hover{
 @media screen and (max-width: 600px){
     .login-container{
          width: 60%;
-         height: 400px;
+         height: 470px;
 
     }
 }
 @media screen and (max-width: 500px){
     .login-container{
          width: 80%;
-         height: 400px;
+         height: 470px;
 
     }
 }
 @media screen and (max-width: 350px){
     .login-container{
          width: 90%;
-         height: 400px;
+         height: 470px;
 
     }
 }

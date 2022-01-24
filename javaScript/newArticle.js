@@ -28,6 +28,7 @@ function meee() {
         titleInfo: `${title}`,
         fullArticleInfo: `${fullArticle}`,
         imgUrlInfo: `${imgUrl}`,
+        Comments:{},
         type:`posts`,
         likes:0,
     }

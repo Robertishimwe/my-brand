@@ -1,10 +1,16 @@
-
+let AdminUsers = {
+  userName:"admin",
+  userEmail:"andela@andela.com",
+  password:"Andela",
+  type:"Singleuser",
+  userID:"admin"
+}
 
 
 //set admin email && password by default
-
 // localStorage.setItem("adminEmail","andela@andela.com")
 // localStorage.setItem("adminPass","Andela")
+localStorage.setItem("admin",JSON.stringify(AdminUsers))
 
 
 function login(){
@@ -15,18 +21,68 @@ let regex = /\w+@[a-zA-Z]+\.[com|net|rw|org|edu|co|shop|air]/;
 let regexPass = /\w|\d/;
 let passwordValidity = regexPass.test(password);
 let emailValidity = regex.test(userEmail);
-let adminEmail = "andela@gmail.com"  //localStorage.getItem("adminEmail")
-let adminPass =  "Andela"//localStorage.getItem("adminPass")
-console.log(emailValidity)
-console.log("pass:"+ passwordValidity)
+// let adminEmail = localStorage.getItem("adminEmail")
+// let adminPass =  localStorage.getItem("adminPass")
+
+  administrator = (JSON.parse(localStorage.getItem("admin")))
+  administratorEmail =  administrator.userEmail;
+  administratorPass = administrator.password;
+// localStorage.setItem("admin",JSON.stringify(AdminUsers))
+// console.log(adminEmail)
+// console.log("pass:"+ passwordValidity)
+
+console.log(administratorEmail)
+console.log(administratorPass)
+
+
+for(let i=0;i<localStorage.length;i++){
+  keyy = localStorage.key(i)
+  let arr = JSON.parse(localStorage.getItem(keyy))
+  
+   storedUserEmail= arr.userEmail;
+   storedUserPassword = arr.password;
+   storedUserType = arr.type;
+   storedUserId = arr.userID;
+   storedUserName = arr.userName;
+
+
+    
+
+
+    
+     if(userEmail == administratorEmail && password == administratorPass){
+      location = "../html/control_panel.html"; 
+    }
+
+if(storedUserType == `Singleuser`) {
+
+// console.log(localStorage.getItem("admin"))
+   
+
+
+
+
+
 
 
 //end of declaration part
 
 //redirect to admin panel
- if(userEmail == adminEmail && password == adminPass){
-   location = "../html/control_panel.html"; 
- }
+
+ if(userEmail == storedUserEmail && password == storedUserPassword){
+
+  currrentlyLogged = {
+
+    storedUserEmail:storedUserEmail,
+    storedUserPassword: storedUserPassword,
+    storedUserType: storedUserType,
+    storedUserId: storedUserId,
+    storedUserName: storedUserName
+   }
+   localStorage.setItem("currentLoggedIn",JSON.stringify(currrentlyLogged))
+  location = "../html/blogTest.html"; 
+}
+
  //email is valid but password is empty
  else if(emailValidity == true & password ==""){
    let msg = "Enter your Password"
@@ -35,7 +91,7 @@ console.log("pass:"+ passwordValidity)
    document.getElementById("user_email").style.border="1px solid green";
    document.getElementById("user-password").style.border="none";
 // correct email but invalid password
- }else if(userEmail == adminEmail & passwordValidity == false){
+ }else if(userEmail == administratorEmail & passwordValidity == false){
    let msg = "Enter Your Password"
    error_message.style.display="block";
    error_message.innerText = msg;
@@ -44,7 +100,7 @@ console.log("pass:"+ passwordValidity)
    
 }
 //correct email but passward doesn't mutch 
-else if(userEmail == adminEmail & password != adminPass){
+else if(userEmail == administratorEmail & password != administratorPass){
    let msg = "Incorrect password";
    error_message.style.display="block";
    error_message.innerText = msg;
@@ -79,4 +135,4 @@ else if(userEmail == adminEmail & password != adminPass){
  }
 
 
-}
+}}}

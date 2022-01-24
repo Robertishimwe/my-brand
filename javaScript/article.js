@@ -1,14 +1,159 @@
-let articleTemplete = `
+let CurrentUser = JSON.parse(localStorage.getItem('currentLoggedIn'));
+commenter = CurrentUser.storedUserName;
+console.log("gggggggggg",CurrentUser)
 
-<style>
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+let createCommet = () => {
+   //key generator
+
+// first part of the key
+
+let keySectionOne = Math.floor(Math.random() * (9000000-100000)+100000);
+// second part of the key
+let alpha = ["a","b","c","d"];
+let as = Math.floor(Math.random()*(3-0)+0)
+let keySectionTwo = alpha[as]
+// third part of the key
+
+let keySectionThree = Math.floor(Math.random() * (90-10)+10);
+//final key
+
+let key = `${keySectionOne}${keySectionTwo}${keySectionThree}`;
+
+
+
+//end of key generator
+
+
+
+
+    commenterBody =  document.getElementById("commentBody").value;
+     singleComment = {
+        commenterName: `${commenter}`,
+        commenterBody: `${commenterBody}`,
+        type:`comment`,
+        parentPost:fID
+        
+     } 
+ localStorage.setItem(key, JSON.stringify(singleComment))
+ location.reload()
+    }
+
+///////////////////////end of comment creation\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// function commmenting(){
+
+//     for(let i=0;i<localStorage.length;i++){
+//         key = localStorage.key(i)
+//        console.log(key)
+
+
+//    let Commentdisplayer = document.querySelector(".kk");
+//    let arr = JSON.parse(localStorage.getItem(key))
+//    let commenterName = arr.commenterName;
+//    let commentBody   = arr.commenterBody;
+//    let parentPost = arr.parentPost;
+//    let type = arr.type;
+//    //  let reg = "/\d{7-6}\w*\d{2}/";
+//    //  let answer = key.test(r);
+//    //  console.log(answer)
+
+
+
+//    if(type == `comment`) {
+
+//   let commmentTemplete = `
+//   <div class="comment-container"><br/>
+//         <div class="sendName">
+//             <p id="sendName">${commenterName}</p>
+//         </div>
+//         <div class="commentBody">
+//             <p id="commentBody">${commentBody} </p>
+//         </div><br/>
+
+//     </div>
+  
+  
+//   `
+//   Commentdisplayer.innerHTML += commmentTemplete;
+
+
+
+//    }
+
+
+// }
+// }
+// commmenting();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let fullPost = () =>{
+for(let i=0;i<localStorage.length;i++){
+       key = localStorage.key(i)
+    //   console.log(key)
+
+
+}
+
+ let displayer = document.getElementById("hhh");
+ let arr2 = JSON.parse(localStorage.getItem('currentPostId'));
+ let arr = JSON.parse(localStorage.getItem(arr2));
+ console.log("mmmm",arr)
+ let title = arr.titleInfo;
+ let img   = arr.imgUrlInfo;
+ let articleBody = arr.fullArticleInfo;
+     Comments = arr.Comments;
+     like = parseInt(arr.likes);
+ let type = arr.type;
+console.log("musenyeri"+like)
+
+fullarticle = `
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&family=Rubik:wght@400;500&display=swap');
 *{
     font-family: 'Roboto', sans-serif;;
+    font-weight: 600;
 }
 
 body{
     background-color: #EDF5FA;
+}
+.blog-container{
+    width: 50%;
+    height: auto;
+    min-height: 40px;
+    background-color: white;
+    border-radius: 19px;
+    margin: auto;
+    margin-top: 50px; 
+    margin-bottom: 150px;
+    box-shadow: 1px 1px 8px 2px #888888;
 }
 
 .title-container{
@@ -17,12 +162,12 @@ body{
     background-color: #3A5768;
 }
 .article-container{
-    width: 40%;
-    height: 1200px;
+    width: 100%;
+    height: 100%;
     background-color: white;
     border-radius: 19px;
     margin: auto;
-    margin-top: -150px;
+    margin-top: -300px;
     margin-bottom: 150px;
     box-shadow: 1px 1px 8px 2px #888888;
 }
@@ -70,6 +215,19 @@ body{
     margin: auto;
     margin-top: 4px;
 }
+.like-btn{
+    width: 20px;
+    height: 20px;
+}
+.reaction{
+    background-color:#EDF5FA;
+    width: 150px;
+    text-align: center;
+    border-radius: 9px;
+}
+.like-counter{
+    font-size:x-small;
+}
 .comment-section{
      /*  border: 1px solid black; */
        width: 95%;
@@ -87,7 +245,7 @@ body{
 .comment-items{
     margin-left: 20%;
     width: 60%;
-    
+
 }
 .comment-btn{
     margin-top: 9px;
@@ -108,27 +266,40 @@ body{
     height: 13%;
 }
 .setcolor{
-    background-color: #C4C4C4;
+    background-color: white;
     border-radius: 4px;
     border: none;
     outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.comment-container{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-top: 4px;
+    background-color: #EDF5FA;
+    border-radius: 19px;
+}
+.sendName{
+    background-color: white;
+    width: 30%;
+    height: 40px;
+    border-radius: 19px 60px 9px 9px;
+    margin-left: 10px;
+    margin-top: -30px;
+    margin-bottom: 2px;
+}
+#sendName{
+    text-align: center;
+    font-size: x-large;
+}
+.commentBody{
+    background-color: white;
+    width: 96%;
+    margin: auto;
+    font-weight: 0px;
+    border-radius: 9px;
+    padding: 1px;
+}
 .reaction-box{
     display: flex;
    /* border: 1px solid black;*/
@@ -178,78 +349,158 @@ body{
     }
 
 }
+    </style>
+    <div class="article-container" id="">
+    <div class="article-title-section"><p class="article-title">${title}</p></div>
 
+    <div class="post-container">
+        <div class="feature-img-container">
+           <img src="${img}" alt="featured image" class="img5">
+        </div>
+    </div>
+    <div class="post-body">
+        <p>${articleBody}</p>
 
-
-
-</style>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../images/logo3ff.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/article.css">
-    <title>blog</title>
-</head>
-<body>
-    
-
-    <menu-bar></menu-bar>
-
-  <div class="title-container"></div>
-  <div class="article-container">
-      <div class="article-title-section"><p class="article-title">5 ways to break into the video game industry</p></div>
-
-      <div class="post-container">
-          <div class="feature-img-container">
-             <img src="../images/img5.jpg" alt="featured image" class="img5">
-          </div>
-      </div>
-      <div class="post-body">
-          <p>I have compiled a showcase of some cool blog comment form designs.  These have different styles and layouts you can be inspired by. You will find very basic comment forms, as well as blog comment form designs with some unique features. Some blogs on this list used a custom made comment form design, which matches the overall website style, while others preferred to use Disqus to gather and manage their comment section. See how they integrated the comment forms in their designs and choose your favorites.</p>
-          <p>I have compiled a showcase of some cool blog comment form designs.  These have different styles and layouts you can be inspired by. You will find very basic comment forms, as well as blog comment form designs with some unique features. Some blogs on this list used a custom made comment form design, which matches the overall website style, while others preferred to use Disqus to gather and manage their comment section. See how they integrated the comment forms in their designs and choose your favorites.</p>
-      </div>
-      <div class="comment-section">
-          <p class="comment-box-title">Leave a comment</p>
-          <label for="comment" class="comment-items">Comment:</label><br/>
-          <textarea name="" id="" cols="30" rows="4" class="comment-items setcolor"></textarea><br/>
-          <label for="name" class="comment-items">Name:</label><br/>
-          <input type="text" name="name" id="name" class="comment-items ali setcolor"><br/>
-          <label for="email" class="comment-items">Email:</label><br/>
-          <input type="email" name="email" id="email" class="comment-items ali setcolor"><br/>
-          <input type="button" value="Submit" class="comment-items comment-btn ali">
-
+        <div class="reaction">
+          Reaction: <img src="../images/like.svg" alt="like" class="like-btn reaction-btn" onclick="liking()" id="like-btn"> <span class="like-counter">${like}</span>
       </div>
 
-          
+    </div>
+    <!-- <div class="reaction">
+        reaction: <img src="../images/like.svg" alt="like" class="like-btn reaction-btn" onclick="liking()" id="like-btn"> <span class="like-counter">${2+3}</span>
+    </div> -->
+    <div class="comment-section">
+        <p class="comment-box-title">Leave a comment</p>
+        <label for="comment" class="comment-items">Comment:</label><br/>
+        <textarea name="" id="commentBody" cols="30" rows="8" class="comment-items setcolor"></textarea><br/>
+     <!--   <label for="name" class="comment-items">Name:</label><br/>
+        <input type="text" name="name" id="commenterName" class="comment-items ali setcolor" ><br/>
+        <label for="email" class="comment-items">Email:</label><br/>
+        <input type="email" name="email" id="commenterEmail" class="comment-items ali setcolor" disabled><br/> -->
+        <input type="submit" value="Submit" class="comment-items comment-btn ali" onclick="createCommet()" >
 
-          
-
+    </div>
+    <div class="kk">
+  <!--<div class="comment-container"><br/>
+      <div class="sendName">
+          <p id="sendName">Honore</p>
       </div>
-     <!--duplicate-->
-
-     
-      </div>
+      <div class="commentBody">
+          <p id="commentBody2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+      </div><br/>-->
+</div>
   </div>
-
-    <footer-bar></footer-bar>
-    <script src="../javaScript/menu.js"></script>
-    <script  src="../javaScript/footer.js"></script>
+<br/>
 
 
-</body>
-</html>                 
+    </div>
+   <!--duplicate-->
 
 
-
-
-
-
-
+    </div>
 
 `
+displayer.innerHTML += fullarticle;
+}
+
+let myID = localStorage.getItem("currentPostId");
+let reg = /\d+(\w)\d+/
+let myID3 = myID.match(reg);
+let fID = myID3[0];
+console.log("you made it bro:"+fID)
+
+
+function liking(){
+    for(let i=0;i<localStorage.length;i++){
+        let key = localStorage.key(i)
+        // console.log(key)
+
+
+
+
+    //let displayer = document.getElementById("hhh");
+    let arr = JSON.parse(localStorage.getItem('currentPost'))
+    let title = arr.titleInfo;
+    let img   = arr.imgUrlInfo;
+    let Comments = arr.Comments;
+    let like = parseInt(arr.likes);
+    let fullArticle = arr.fullArticleInfo;
+
+
+
+
+    let articleData = {
+            titleInfo: `${title}`,
+            fullArticleInfo: `${fullArticle}`,
+            imgUrlInfo: `${img}`,
+            Comments:Comments,
+            type:`posts`,
+            likes:like+1,
+        }
+        console.log(Comments)
+console.log("hello"+articleData)
+
+        localStorage.setItem(fID, JSON.stringify(articleData))
+        location.reload();
+        fullPost();
+
+    }
+}
+
+//end of liking operation
+
+        
+    
+fullPost()
+
+
+function commmenting(){
+
+    for(let i=0;i<localStorage.length;i++){
+        key = localStorage.key(i)
+       console.log(key)
+
+
+   let Commentdisplayer = document.querySelector(".kk");
+   let arr = JSON.parse(localStorage.getItem(key))
+   let commenterName = arr.commenterName;
+   let commentBody   = arr.commenterBody;
+   let parentPost = arr.parentPost;
+   let type = arr.type;
+   //  let reg = "/\d{7-6}\w*\d{2}/";
+   //  let answer = key.test(r);
+   //  console.log(answer)
+
+
+
+   if(type == `comment` && fID == parentPost) {
+
+  let commmentTemplete = `
+  <div class="comment-container"><br/>
+        <div class="sendName">
+            <p id="sendName">${commenterName}</p>
+        </div>
+        <div class="commentBody">
+            <p id="commentBody">${commentBody} </p>
+        </div><br/>
+
+    </div>
+  
+  
+  `
+  Commentdisplayer.innerHTML += commmentTemplete;
+
+
+
+   }
+
+
+}
+
+}
+commmenting();
+
+
+
+
+
