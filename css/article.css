@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&family=Rubik:wght@400;500&display=swap');
+
 *{
     font-family: 'Roboto', sans-serif;;
+    font-weight: 600;
+}
+.blog-container{
+    width: 40%;
+    height: auto;
+    min-height: 40px;
+    background-color: white;
+    border-radius: 19px;
+    margin: auto;
+    /* margin-top: -180px; */
+    margin-bottom: 150px;
+    box-shadow: 1px 1px 8px 2px #888888;
 }
 
 body{
@@ -14,7 +28,7 @@ body{
 }
 .article-container{
     width: 40%;
-    height: 1200px;
+    height: auto;
     background-color: white;
     border-radius: 19px;
     margin: auto;
@@ -66,6 +80,19 @@ body{
     margin: auto;
     margin-top: 4px;
 }
+.like-btn{
+    width: 20px;
+    height: 20px;
+}
+.reaction{
+    background-color:#EDF5FA;
+    width: 150px;
+    text-align: center;
+    border-radius: 9px;
+}
+.like-counter{
+    font-size:x-small;
+}
 .comment-section{
      /*  border: 1px solid black; */
        width: 95%;
@@ -109,7 +136,41 @@ body{
     border: none;
     outline: none;
 }
-
+.comment-container{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-top: 4px;
+    background-color: #EDF5FA;
+    border-radius: 19px;
+}
+.sendName{
+    background-color: white;
+    width: 30%;
+    height: 40px;
+    border-radius: 19px 60px 9px 9px;
+    margin-left: 10px; 
+    margin-top: -30px;
+    margin-bottom: 2px;
+}
+#sendName{
+    text-align: center;
+    font-size: x-large;
+}
+.commentBody{
+    background-color: white;
+    width: 96%;
+    margin: auto;
+    font-weight: 0px;
+    border-radius: 9px;
+    padding: 1px;
+}
+#commentBody{
+    /* font-family: 'Lato', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 0; */
+    
+}
 
 
 
